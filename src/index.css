@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@keyframes fade-slide-left {
+  0% { opacity: 0; transform: translateX(-50px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+.animate-fade-left {
+  animation: fade-slide-left 0.8s ease-out forwards;
+}
+
+@keyframes fade-slide-right {
+  0% { opacity: 0; transform: translateX(50px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+.animate-fade-right {
+  animation: fade-slide-right 0.8s ease-out forwards;
+}
+
+@keyframes fade-slide-up {
+  0% { opacity: 0; transform: translateY(50px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-up {
+  animation: fade-slide-up 0.8s ease-out forwards;
+}
+@keyframes fade-slide-down {
+  0% { opacity: 0; transform: translateY(-50px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-down {
+  animation: fade-slide-down 0.8s ease-out forwards;
+}
