@@ -31,7 +31,7 @@ const Project = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 p-5 m-auto">
+      <div className="grid grid-cols-1 lg:grid-cols-2 m-10">
         <div className="flex flex-col gap-5 border border-gray-700 p-5 rounded animate-fade-right">
           <div className="flex justify-between">
             <div className="text-xl flex items-center gap-2">
