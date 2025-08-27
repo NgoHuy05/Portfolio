@@ -27,15 +27,13 @@ const Home = () => {
           <div className="border border-dashed"></div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="flex justify-between items-center border-b border-dashed p-2">
-    <div>Experience:</div>
-    <div className="font-bold">Apprentice, 0 Years</div>
-  </div>
-  <div className="flex justify-between items-center border-b border-dashed p-2">
-    <div>Projects Completed:</div>
-    <div className="font-bold">2+</div>
-  </div>
-
-
+              <div>Experience:</div>
+              <div className="font-bold">Apprentice, 0 Years</div>
+            </div>
+            <div className="flex justify-between items-center border-b border-dashed p-2">
+              <div>Projects Completed:</div>
+              <div className="font-bold">2+</div>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 gap-4 border-2 border-amber-500 p-10 bg-gradient-to-tl from-gray-100 to-amber-200 rounded">
@@ -167,7 +165,9 @@ const Home = () => {
           Explore My Projects
         </Link>
 
-        <button
+        <a
+          href="/CV Resume - NgoDucHuy.pdf"
+          download="CV-Resume_NgoDucHuy.pdf"
           className="w-[80%]
     border-2 border-cyan-500 p-5 
     bg-cyan-400 text-gray-900
@@ -177,7 +177,7 @@ const Home = () => {
   "
         >
           Download Resume
-        </button>
+        </a>
       </div>
 
       <div className="border border-dashed mt-10 mb-10"></div>
