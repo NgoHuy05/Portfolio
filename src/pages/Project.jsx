@@ -1,10 +1,40 @@
 import { GoBook } from "react-icons/go";
 import { FaStar } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
-import { FiArrowRight } from "react-icons/fi";
 import { BsBoxArrowUpRight } from "react-icons/bs";
 
 const Project = () => {
+  const technicalEquiq = [
+    { value: "React" },
+    { value: "Tailwindcss" },
+    { value: "Node/Express" },
+    { value: "JavaScript" },
+    { value: "MongoDB" },
+    { value: "Vercel" },
+    { value: "Render" },
+    { value: "Git" },
+  ];
+
+  const projectDetails = [
+    { label: "Duration:", value: "2 months" },
+    { label: "Teams:", value: "Solo" },
+    { label: "Category:", value: "Web Development", colSpan: 2 },
+  ];
+  const whatILearned = [
+    {
+      title: "Frontend with React",
+      desc: "Learned how to structure React components, manage state, and reuse UI elements effectively.",
+    },
+    {
+      title: "Backend with Node/Express",
+      desc: "Implemented RESTful APIs, handled routes and middleware, and connected to a database.",
+    },
+    {
+      title: "Fullstack Integration",
+      desc: "Learned to connect frontend React app with backend APIs and manage data flow.",
+    },
+  ];
+
   return (
     <>
       <div className="grid grid-cols-1 lg:grid-cols-2 items-start justify-between gap-5 p-4 shadow-lg shadow-gray-300 m-10 border border-amber-500 rounded animate-fade-down">
@@ -31,7 +61,7 @@ const Project = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 p-5 m-auto">
+      <div className="grid grid-cols-1 lg:grid-cols-2 m-10">
         <div className="flex flex-col gap-5 border border-gray-700 p-5 rounded animate-fade-right">
           <div className="flex justify-between">
             <div className="text-xl flex items-center gap-2">
@@ -50,69 +80,41 @@ const Project = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 border-2 border-amber-500 p-5 bg-gradient-to-tl from-gray-100 to-amber-200 rounded">
-            <div className="flex justify-between items-center border-b border-dashed p-2">
-              <div className="font-bold">Duration:</div>
-              <div>2 months</div>
-            </div>
-            <div className="flex justify-between items-center border-b border-dashed p-2">
-              <div className="font-bold">Teams:</div>
-              <div>Solo</div>
-            </div>
-            <div className="flex justify-between items-center border-b border-dashed col-span-2 p-2">
-              <div className="font-bold">Category: </div>
-              <div>Web Developent</div>
-            </div>
+            {projectDetails.map((item, index) => (
+              <div
+                key={index}
+                className="flex justify-between items-center border-b border-dashed p-2"
+              >
+                <div className="font-bold">{item.label}</div>
+                <div>{item.value}</div>
+              </div>
+            ))}
           </div>
 
           <div className="text-xl font-bold">Technical Equipment:</div>
           <div className="flex flex-wrap gap-4">
-            <div className="border border-amber-500 p-2 bg-gradient-to-br from-amber-200 to-gray-100  rounded hover:scale-110 transition-transform duration 300">
-              React
-            </div>
-            <div className="border border-amber-500 p-2 bg-gradient-to-br from-amber-200 to-gray-100  rounded hover:scale-110 transition-transform duration 300">
-              Tailwindcss
-            </div>
-            <div className="border border-amber-500 p-2 bg-gradient-to-br from-amber-200 to-gray-100  rounded hover:scale-110 transition-transform duration 300">
-              Node/Express
-            </div>
-            <div className="border border-amber-500 p-2 bg-gradient-to-br from-amber-200 to-gray-100  rounded hover:scale-110 transition-transform duration 300">
-              JavaScript
-            </div>
-            <div className="border border-amber-500 p-2 bg-gradient-to-br from-amber-200 to-gray-100  rounded hover:scale-110 transition-transform duration 300">
-              MongoDB
-            </div>
-            <div className="border border-amber-500 p-2 bg-gradient-to-br from-amber-200 to-gray-100  rounded hover:scale-110 transition-transform duration 300">
-              Vercel
-            </div>
-            <div className="border border-amber-500 p-2 bg-gradient-to-br from-amber-200 to-gray-100  rounded hover:scale-110 transition-transform duration 300">
-              Render
-            </div>
+            {technicalEquiq.map((item, index) => (
+              <div
+                key={index}
+                className="border border-amber-500 p-2 bg-gradient-to-br from-amber-200 to-gray-100  rounded hover:scale-110 transition-transform duration 300"
+              >
+                {item.value}
+              </div>
+            ))}
           </div>
 
           <div className="text-xl font-bold mt-5">What I Learned:</div>
 
           <div className="flex flex-col gap-4 mt-2">
-            <div className="border border-gray-300 p-3 rounded shadow-sm bg-gray-50">
-              <div className="font-bold">Frontend with React</div>
-              <div className="text-gray-700 italic">
-                Learned how to structure React components, manage state, and
-                reuse UI elements effectively.
+            {whatILearned.map((item, index) => (
+              <div
+                key={index}
+                className="border border-gray-300 p-3 rounded shadow-sm bg-gray-50"
+              >
+                <div className="font-bold">{item.title}</div>
+                <div className="text-gray-700 italic">{item.desc}</div>
               </div>
-            </div>
-            <div className="border border-gray-300 p-3 rounded shadow-sm bg-gray-50">
-              <div className="font-bold">Backend with Node/Express</div>
-              <div className="text-gray-700 italic">
-                Implemented RESTful APIs, handled routes and middleware, and
-                connected to a database.
-              </div>
-            </div>
-            <div className="border border-gray-300 p-3 rounded shadow-sm bg-gray-50">
-              <div className="font-bold">Fullstack Integration</div>
-              <div className="text-gray-700 italic">
-                Learned to connect frontend React app with backend APIs and
-                manage data flow.
-              </div>
-            </div>
+            ))}
           </div>
 
           <div className="flex justify-between items-center p-2">
@@ -138,7 +140,8 @@ const Project = () => {
                 <div>Code</div>
               </a>
               <a
-                href="https://lexinary.vercel.app/" target="_blank"
+                href="https://lexinary.vercel.app/"
+                target="_blank"
                 className="border-2 border-cyan-500 p-2 flex items-center gap-2
                 bg-cyan-400 text-gray-900
                 hover:bg-cyan-500 

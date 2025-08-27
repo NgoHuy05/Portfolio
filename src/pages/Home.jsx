@@ -8,6 +8,24 @@ import { FaProjectDiagram } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Home = () => {
+  const frontendSkill = [
+    { value: "React" },
+    { value: "Tailwindcss" },
+    { value: "CSS/SCSS" },
+    { value: "JavaScript" },
+    { value: "TypeScript" },
+  ];
+  const backendSkill = [
+    { value: "Node.js/Express" },
+    { value: "MongoDB" },
+    { value: "JavaScript" },
+    { value: "TypeScript" },
+  ];
+  const toolSkill = [
+    { value: "Git" },
+    { value: "Vercel" },
+    { value: "Render" },
+  ];
   return (
     <>
       <div className="grid grid-cols-1 lg:grid-cols-3 items-start justify-between gap-5 p-4 shadow-lg shadow-gray-300 m-10 border border-amber-500 rounded animate-fade-down">
@@ -22,7 +40,7 @@ const Home = () => {
 
         <div className="grid col-span-2 gap-5 animate-fade-right">
           <div className="text-3xl text-amber-500 font-bold">Ngo Duc Huy</div>
-          <div className="text-2xl italic">"Huy Phase First"</div>
+          <div className="text-2xl italic">"Huy Level 1"</div>
           <div className="text-xl">Apprentice in Fullstack Developer</div>
           <div className="border border-dashed"></div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -76,52 +94,40 @@ const Home = () => {
           <div className="border-l-4 border-amber-500 pl-5 space-y-2">
             <div className="text-xl font-bold">Fronted</div>
             <div className="flex flex-wrap gap-4">
-              <div className="border border-amber-500 p-2 bg-gradient-to-br from-amber-200 to-gray-100  rounded hover:scale-110 transition-transform duration 300">
-                React
-              </div>
-              <div className="border border-amber-500 p-2 bg-gradient-to-br from-amber-200 to-gray-100  rounded hover:scale-110 transition-transform duration 300">
-                Tailwindcss
-              </div>
-              <div className="border border-amber-500 p-2 bg-gradient-to-br from-amber-200 to-gray-100  rounded hover:scale-110 transition-transform duration 300">
-                CSS/SCSS
-              </div>
-              <div className="border border-amber-500 p-2 bg-gradient-to-br from-amber-200 to-gray-100  rounded hover:scale-110 transition-transform duration 300">
-                JavaScript
-              </div>
-              <div className="border border-amber-500 p-2 bg-gradient-to-br from-amber-200 to-gray-100  rounded hover:scale-110 transition-transform duration 300">
-                TypeScript
-              </div>
+              {frontendSkill.map((item, index) => (
+                <div
+                  key={index}
+                  className="border border-amber-500 p-2 bg-gradient-to-br from-amber-200 to-gray-100 rounded hover:scale-110 transition-transform duration 300"
+                >
+                  {item.value}
+                </div>
+              ))}
             </div>
           </div>
           <div className="border-l-4 border-amber-500 pl-5 space-y-2">
             <div className="text-xl font-bold">Backend</div>
             <div className="flex flex-wrap gap-4">
-              <div className="border border-amber-500 p-2 bg-gradient-to-br from-amber-200 to-gray-100 rounded hover:scale-110 transition-transform duration 300">
-                Node.js/Express
-              </div>
-              <div className="border border-amber-500 p-2 bg-gradient-to-br from-amber-200 to-gray-100  rounded hover:scale-110 transition-transform duration 300">
-                C/C++
-              </div>
-              <div className="border border-amber-500 p-2 bg-gradient-to-br from-amber-200 to-gray-100  rounded hover:scale-110 transition-transform duration 300">
-                MongoDB
-              </div>
-              <div className="border border-amber-500 p-2 bg-gradient-to-br from-amber-200 to-gray-100  rounded hover:scale-110 transition-transform duration 300">
-                TypeScript
-              </div>
+              {backendSkill.map((item, index) => (
+                <div
+                  key={index}
+                  className="border border-amber-500 p-2 bg-gradient-to-br from-amber-200 to-gray-100 rounded hover:scale-110 transition-transform duration 300"
+                >
+                  {item.value}
+                </div>
+              ))}
             </div>
           </div>
           <div className="border-l-4 border-amber-500 pl-5 space-y-2">
             <div className="text-xl font-bold">Tools</div>
             <div className="flex flex-wrap gap-4">
-              <div className="border border-amber-500 p-2 bg-gradient-to-br from-amber-200 to-gray-100 rounded hover:scale-110 transition-transform duration 300">
-                Git
-              </div>
-              <div className="border border-amber-500 p-2 bg-gradient-to-br from-amber-200 to-gray-100  rounded hover:scale-110 transition-transform duration 300">
-                Vercel
-              </div>
-              <div className="border border-amber-500 p-2 bg-gradient-to-br from-amber-200 to-gray-100  rounded hover:scale-110 transition-transform duration 300">
-                Render
-              </div>
+              {toolSkill.map((item, index) => (
+                <div
+                  key={index}
+                  className="border border-amber-500 p-2 bg-gradient-to-br from-amber-200 to-gray-100 rounded hover:scale-110 transition-transform duration 300"
+                >
+                  {item.value}
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -155,12 +161,12 @@ const Home = () => {
         <Link
           to="project"
           className=" w-[80%] flex justify-center
-    border-2 border-amber-500 p-5 
-    bg-amber-300 text-gray-900
-    hover:bg-amber-500 
-    hover:scale-105 
-    transition-all duration-300 cursor-pointer rounded-xl shadow-md
-  "
+          border-2 border-amber-500 p-5 
+          bg-amber-300 text-gray-900
+          hover:bg-amber-500 
+          hover:scale-105 
+          transition-all duration-300 cursor-pointer rounded-xl shadow-md
+          "
         >
           Explore My Projects
         </Link>
@@ -169,12 +175,12 @@ const Home = () => {
           href="/CV Resume - NgoDucHuy.pdf"
           download="CV-Resume_NgoDucHuy.pdf"
           className="w-[80%]
-    border-2 border-cyan-500 p-5 
-    bg-cyan-400 text-gray-900
-    hover:bg-cyan-500 
-    hover:scale-105 
-    transition-all duration-300 cursor-pointer rounded-xl shadow-md
-  "
+          border-2 border-cyan-500 p-5 
+          bg-cyan-400 text-gray-900
+          hover:bg-cyan-500 
+          hover:scale-105 
+          transition-all duration-300 cursor-pointer rounded-xl shadow-md
+          "
         >
           Download Resume
         </a>

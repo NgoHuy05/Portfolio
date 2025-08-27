@@ -15,7 +15,7 @@ const Contact = () => {
           </div>
           <div className="text-2xl italic">"Let's start a conversation"</div>
           <div className="text-xl">
-            If you want to collaborate, chat about tech, or share travel stories
+            Feel free to reach out to me on Facebook and let’s connect.
           </div>
           <div className="border border-dashed"></div>
 
@@ -81,7 +81,7 @@ const Contact = () => {
           </div>
           <div className="flex items-center gap-5 border-2 border-gray-600 p-5 rounded hover:shadow-lg shadow-gray-300 transition duration-300">
             <div className="text-3xl border border-amber-500 bg-gradient-to-br from-amber-200 to-gray-100 p-4 rounded">
-              <FaFacebook/>
+              <FaFacebook />
             </div>
             <div className="flex flex-col gap-2">
               <div className="text-2xl font-bold">Facebook</div>
@@ -91,7 +91,6 @@ const Contact = () => {
           <div className="flex items-center gap-5 border-2 border-gray-600 p-5 rounded hover:shadow-lg shadow-gray-300 transition duration-300">
             <div className="text-3xl border border-amber-500 bg-gradient-to-br from-amber-200 to-gray-100 p-4 rounded">
               <FaSquareInstagram />
-
             </div>
             <div className="flex flex-col gap-2">
               <div className="text-2xl font-bold">Instagram</div>

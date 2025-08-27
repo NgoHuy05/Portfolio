@@ -1,22 +1,17 @@
 import React, { useState } from "react";
-import { FaHome } from "react-icons/fa";
-import { FaUser } from "react-icons/fa";
-import { FaProjectDiagram } from "react-icons/fa";
-import { FaEnvelope } from "react-icons/fa";
-import { FaHeart } from "react-icons/fa";
+import { FaHome, FaUser, FaProjectDiagram, FaEnvelope, FaHeart } from "react-icons/fa";
 import { IoMdMenu } from "react-icons/io";
-
 import { NavLink, Link } from "react-router-dom";
+
+const navItems = [
+  { path: "/", label: "Home", icon: <FaHome /> },
+  { path: "about", label: "About", icon: <FaUser /> },
+  { path: "project", label: "Project", icon: <FaProjectDiagram /> },
+  { path: "contact", label: "Contact", icon: <FaEnvelope /> },
+];
 
 const Header = () => {
   const [isOpenMenuHeader, setIsOpenMenuHeader] = useState(false);
-
-  const handleOpenMenuHeader = () => {
-    setIsOpenMenuHeader(!isOpenMenuHeader);
-  };
-  const handleCloseMenuHeader = () => {
-    setIsOpenMenuHeader(false);
-  };
 
   return (
     <>
@@ -29,102 +24,56 @@ const Header = () => {
             H
           </div>
           <div className="flex flex-col justify-center gap-1">
-            <div className="text-xl mb-2 italic">HuyPhaseFirst</div>
+            <div className="text-xl mb-2 italic">Huy Level 1</div>
             <div>Travel PortFolio</div>
           </div>
         </Link>
-        <div className="hidden lg:flex items-center gap-10 ">
-          <NavLink
-            to="/"
-            className={({ isActive }) =>
-              `flex gap-2 items-center p-5 hover:bg-gray-200 rounded transition duration-300 cursor-pointer ${
-                isActive ? "underline underline-offset-[10px] decoration-2" : ""
-              }`
-            }
-          >
-            <FaHome />
-            Home
-          </NavLink>
-          <NavLink
-            to="about"
-            className={({ isActive }) =>
-              `flex gap-2 items-center p-5 hover:bg-gray-200 rounded transition duration-300 cursor-pointer ${
-                isActive ? "underline underline-offset-[10px] decoration-2" : ""
-              }`
-            }
-          >
-            <FaUser />
-            About
-          </NavLink>
-          <NavLink
-            to="project"
-            className={({ isActive }) =>
-              `flex gap-2 items-center p-5 hover:bg-gray-200 rounded transition duration-300 cursor-pointer ${
-                isActive ? "underline underline-offset-[10px] decoration-2" : ""
-              }`
-            }
-          >
-            <FaProjectDiagram />
-            Project
-          </NavLink>
-          <NavLink
-            to="contact"
-            className={({ isActive }) =>
-              `flex gap-2 items-center p-5 hover:bg-gray-200 rounded transition duration-300 cursor-pointer ${
-                isActive ? "underline underline-offset-[10px] decoration-2" : ""
-              }`
-            }
-          >
-            <FaEnvelope />
-            Contact
-          </NavLink>
+
+        <div className="hidden lg:flex items-center gap-10">
+          {navItems.map((item) => (
+            <NavLink
+              key={item.path}
+              to={item.path}
+              className={({ isActive }) =>
+                `flex gap-2 items-center p-5 hover:bg-gray-200 rounded transition duration-300 cursor-pointer ${
+                  isActive ? "underline underline-offset-[10px] decoration-2" : ""
+                }`
+              }
+            >
+              {item.icon} {item.label}
+            </NavLink>
+          ))}
         </div>
+
         <div className="hidden lg:flex gap-2 items-center">
-          Welcome
-          <FaHeart />
+          Welcome <FaHeart />
         </div>
+
         <div
-          onClick={handleOpenMenuHeader}
+          onClick={() => setIsOpenMenuHeader(!isOpenMenuHeader)}
           className="flex items-center p-2 hover:bg-gray-200 rounded transition duration-300 cursor-pointer text-[25px] lg:hidden "
         >
           <IoMdMenu />
         </div>
       </div>
+
       {isOpenMenuHeader && (
         <div className="sticky top-[95px] w-full bg-white shadow-md z-40 lg:hidden">
           <nav className="flex flex-col text-gray-900 font-semibold">
-            <NavLink
-              to="/"
-              onClick={handleCloseMenuHeader}
-              className="p-4 hover:bg-gray-100 flex items-center gap-2"
-            >
-              <FaHome /> Home
-            </NavLink>
-            <NavLink
-              to="about"
-              onClick={handleCloseMenuHeader}
-              className="p-4 hover:bg-gray-100 flex items-center gap-2"
-            >
-              <FaUser /> About
-            </NavLink>
-            <NavLink
-              to="project"
-              onClick={handleCloseMenuHeader}
-              className="p-4 hover:bg-gray-100 flex items-center gap-2"
-            >
-              <FaProjectDiagram /> Project
-            </NavLink>
-            <NavLink
-              to="contact"
-              onClick={handleCloseMenuHeader}
-              className="p-4 hover:bg-gray-100 flex items-center gap-2 "
-            >
-              <FaEnvelope /> Contact
-            </NavLink>
+            {navItems.map((item) => (
+              <NavLink
+                key={item.path}
+                to={item.path}
+                onClick={() => setIsOpenMenuHeader(false)}
+                className="p-4 hover:bg-gray-100 flex items-center gap-2"
+              >
+                {item.icon} {item.label}
+              </NavLink>
+            ))}
+
             <div className="flex justify-center items-center border-b-2 border-gray-600 w-[98%] m-auto"></div>
             <div className="p-4 flex items-center gap-2 ">
-              Welcome
-              <FaHeart />
+              Welcome <FaHeart />
             </div>
           </nav>
         </div>
