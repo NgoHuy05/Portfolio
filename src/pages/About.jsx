@@ -3,8 +3,8 @@ import avtKrt from "@/assets/kirito.png";
 const About = () => {
   return (
     <>
-      <div className="grid grid-cols-[30%_65%] items-start gap-5 p-5 pb-10 shadow-lg shadow-gray-300 m-10 border border-amber-500 rounded animate-fade-down">
-        <div className="flex flex-col p-5 col-span-2 gap-2 animate-fade-left">
+      <div className="grid grid-cols-1 md:grid-cols-[30%_65%] items-start gap-5 p-5 pb-10 shadow-lg shadow-gray-300 m-10 border border-amber-500 rounded animate-fade-down">
+        <div className="flex flex-col p-5 col-span-1 md:col-span-2 gap-2 animate-fade-left">
           <div className="text-amber-500 font-bold text-3xl p-2">
             Personal Profile
           </div>
@@ -15,6 +15,7 @@ const About = () => {
             A path of growth and creation through coding projects
           </div>
         </div>
+        
         <div className=" flex justify-center items-center h-full animate-fade-left">
           <img
             src={avtKrt}
