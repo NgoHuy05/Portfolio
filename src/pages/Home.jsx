@@ -22,7 +22,7 @@ const Home = () => {
 
         <div className="grid col-span-2 gap-5 animate-fade-right">
           <div className="text-3xl text-amber-500 font-bold">Ngo Duc Huy</div>
-          <div className="text-2xl italic">"Huy Phase First"</div>
+          <div className="text-2xl italic">"Huy Level 1"</div>
           <div className="text-xl">Apprentice in Fullstack Developer</div>
           <div className="border border-dashed"></div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
