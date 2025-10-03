@@ -175,6 +175,7 @@ const Home = () => {
           href="/CV Resume - NgoDucHuy.pdf"
           download="CV-Resume_NgoDucHuy.pdf"
           className="w-[80%]
+          text-center
           border-2 border-cyan-500 p-5 
           bg-cyan-400 text-gray-900
           hover:bg-cyan-500 
