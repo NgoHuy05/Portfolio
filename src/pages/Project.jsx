@@ -3,13 +3,14 @@ import { GoBook } from "react-icons/go";
 import { FcTodoList } from "react-icons/fc";
 import { FaStar } from "react-icons/fa";
 import { BsBoxArrowUpRight } from "react-icons/bs";
+import { MdOutlineVolunteerActivism } from "react-icons/md";
 
 const Project = () => {
   const projects = [
     {
       icon: <GoBook />,
       projectId: "Project-001",
-      year: 2025,
+      year: `03/2025 - 05/2025`,
       title: "Study English - Lexinary",
       description:
         "A web application designed to help users learn and practice English vocabulary efficiently through interactive lessons, flashcards and games.",
@@ -46,7 +47,7 @@ const Project = () => {
     {
       icon: <FcTodoList />,
       projectId: "Project-002",
-      year: 2025,
+      year: `0  8/2025`,
       title: "ToDoList",
       description: "A web application designed to help users create notes",
       projectDetails: [
@@ -68,6 +69,42 @@ const Project = () => {
       codeLink: "https://github.com/NgoHuy05/ToDoList",
       demoLink: "https://to-do-list-hk.vercel.app/",
       rate: 3.5,
+    },
+    {
+      icon: <MdOutlineVolunteerActivism />,
+      projectId: "Project-003",
+      year: `10/2025 - 11/2025`,
+      title: "VolunteerHub",
+      description: "A web application designed to help users join events volunteer",
+      projectDetails: [
+        { label: "Duration:", value: "1 month" },
+        { label: "Teams:", value: "Solo" },
+        { label: "Category:", value: "Web Development" },
+      ],
+      technicalEquiq: [
+        { value: "React" },
+        { value: "Tailwindcss" },
+        { value: "JavaScript" },
+        { value: "Socket" },
+        { value: "Mongodb" },
+      ],
+      whatILearned: [
+        {
+          title: "Frontend with React",
+          desc: "Learned how to structure React components, manage state, and reuse UI elements effectively.",
+        },
+            {
+          title: "Backend with Node/Express",
+          desc: "mongodb cloudinary jwt socket bcrypt",
+        },
+        {
+          title: "Fullstack Integration",
+          desc: "Learned to connect frontend React app with backend APIs and manage data flow.",
+        },
+      ],
+      codeLink: "https://github.com/NgoHuy05/VolunteerHub",
+      demoLink: "https://volunteer-hub-uet-kdqb.vercel.app/",
+      rate: 4.0,
     },
   ];
 
