@@ -6,108 +6,148 @@ import { BsBoxArrowUpRight } from "react-icons/bs";
 import { MdOutlineVolunteerActivism } from "react-icons/md";
 
 const Project = () => {
-  const projects = [
-    {
-      icon: <GoBook />,
-      projectId: "Project-001",
-      year: `03/2025 - 05/2025`,
-      title: "Study English - Lexinary",
-      description:
-        "A web application designed to help users learn and practice English vocabulary efficiently through interactive lessons, flashcards and games.",
-      projectDetails: [
-        { label: "Duration:", value: "2 months" },
-        { label: "Teams:", value: "Solo" },
-        { label: "Category:", value: "Web Development" },
-      ],
-      technicalEquiq: [
-        { value: "React" },
-        { value: "SCSS" },
-        { value: "Node/Express" },
-        { value: "JavaScript" },
-        { value: "MongoDB" },
-      ],
-      whatILearned: [
-        {
-          title: "Frontend with React",
-          desc: "Learned how to structure React components, manage state, and reuse UI elements effectively.",
-        },
-        {
-          title: "Backend with Node/Express",
-          desc: "Implemented RESTful APIs, handled routes and middleware, and connected to a database.",
-        },
-        {
-          title: "Fullstack Integration",
-          desc: "Learned to connect frontend React app with backend APIs and manage data flow.",
-        },
-      ],
-      codeLink: "https://github.com/NgoHuy05/LEXINARY",
-      demoLink: "https://lexinary.vercel.app/",
-      rate: 2.5,
-    },
-    {
-      icon: <FcTodoList />,
-      projectId: "Project-002",
-      year: `0  8/2025`,
-      title: "ToDoList",
-      description: "A web application designed to help users create notes",
-      projectDetails: [
-        { label: "Duration:", value: "1 week" },
-        { label: "Teams:", value: "Solo" },
-        { label: "Category:", value: "Web Development" },
-      ],
-      technicalEquiq: [
-        { value: "React" },
-        { value: "Tailwindcss" },
-        { value: "JavaScript" },
-      ],
-      whatILearned: [
-        {
-          title: "Frontend with React",
-          desc: "Learned how to structure React components, manage state, and reuse UI elements effectively.",
-        }
-      ],
-      codeLink: "https://github.com/NgoHuy05/ToDoList",
-      demoLink: "https://to-do-list-hk.vercel.app/",
-      rate: 3.5,
-    },
-    {
-      icon: <MdOutlineVolunteerActivism />,
-      projectId: "Project-003",
-      year: `10/2025 - 11/2025`,
-      title: "VolunteerHub",
-      description: "A web application designed to help users join events volunteer",
-      projectDetails: [
-        { label: "Duration:", value: "1 month" },
-        { label: "Teams:", value: "Solo" },
-        { label: "Category:", value: "Web Development" },
-      ],
-      technicalEquiq: [
-        { value: "React" },
-        { value: "Tailwindcss" },
-        { value: "JavaScript" },
-        { value: "Socket" },
-        { value: "Mongodb" },
-      ],
-      whatILearned: [
-        {
-          title: "Frontend with React",
-          desc: "Learned how to structure React components, manage state, and reuse UI elements effectively.",
-        },
-            {
-          title: "Backend with Node/Express",
-          desc: "mongodb cloudinary jwt socket bcrypt",
-        },
-        {
-          title: "Fullstack Integration",
-          desc: "Learned to connect frontend React app with backend APIs and manage data flow.",
-        },
-      ],
-      codeLink: "https://github.com/NgoHuy05/VolunteerHub",
-      demoLink: "https://volunteer-hub-uet-kdqb.vercel.app/",
-      rate: 4.0,
-    },
-  ];
+const projects = [
+  {
+    icon: <GoBook />,
+    projectId: "Project-001",
+    year: `03/2025 - 05/2025`,
+    title: "Study English - Lexinary",
+    description:
+      "A web application designed to help users learn and practice English vocabulary efficiently through interactive lessons, flashcards and games.",
+    projectDetails: [
+      { label: "Duration:", value: "2 months" },
+      { label: "Teams:", value: "Solo" },
+      { label: "Category:", value: "Web Development" },
+    ],
+    technicalEquiq: [
+      { value: "React" },
+      { value: "SCSS" },
+      { value: "Node/Express" },
+      { value: "JavaScript" },
+      { value: "MongoDB" },
+    ],
+    whatILearned: [
+      {
+        title: "Frontend with React",
+        desc: "Learned how to structure React components, manage state, and reuse UI elements effectively.",
+      },
+      {
+        title: "Backend with Node/Express",
+        desc: "Implemented RESTful APIs, handled routes and middleware, and connected to a database.",
+      },
+      {
+        title: "Fullstack Integration",
+        desc: "Learned to connect frontend React app with backend APIs and manage data flow.",
+      },
+    ],
+    codeLink: "https://github.com/NgoHuy05/LEXINARY",
+    demoLink: "https://lexinary.vercel.app/",
+    rate: 2.5,
+  },
 
+  {
+    icon: <FcTodoList />,
+    projectId: "Project-002",
+    year: `08/2025`,
+    title: "ToDoList",
+    description: "A web application designed to help users create notes",
+    projectDetails: [
+      { label: "Duration:", value: "1 week" },
+      { label: "Teams:", value: "Solo" },
+      { label: "Category:", value: "Web Development" },
+    ],
+    technicalEquiq: [
+      { value: "React" },
+      { value: "Tailwindcss" },
+      { value: "JavaScript" },
+    ],
+    whatILearned: [
+      {
+        title: "Frontend with React",
+        desc: "Learned how to structure React components, manage state, and reuse UI elements effectively.",
+      },
+    ],
+    codeLink: "https://github.com/NgoHuy05/ToDoList",
+    demoLink: "https://to-do-list-hk.vercel.app/",
+    rate: 3.5,
+  },
+
+  {
+    icon: <MdOutlineVolunteerActivism />,
+    projectId: "Project-003",
+    year: `10/2025 - 11/2025`,
+    title: "VolunteerHub",
+    description:
+      "A web application designed to help users join events volunteer",
+    projectDetails: [
+      { label: "Duration:", value: "1 month" },
+      { label: "Teams:", value: "Solo" },
+      { label: "Category:", value: "Web Development" },
+    ],
+    technicalEquiq: [
+      { value: "React" },
+      { value: "Tailwindcss" },
+      { value: "JavaScript" },
+      { value: "Socket" },
+      { value: "MongoDB" },
+    ],
+    whatILearned: [
+      {
+        title: "Frontend with React",
+        desc: "Learned how to structure React components, manage state, and reuse UI elements effectively.",
+      },
+      {
+        title: "Backend with Node/Express",
+        desc: "mongodb, cloudinary, jwt, socket, bcrypt",
+      },
+      {
+        title: "Fullstack Integration",
+        desc: "Learned to connect frontend React app with backend APIs and manage data flow.",
+      },
+    ],
+    codeLink: "https://github.com/NgoHuy05/VolunteerHub",
+    demoLink: "https://volunteer-hub-uet-kdqb.vercel.app/",
+    rate: 4.0,
+  },
+
+  {
+    icon: <BsBoxArrowUpRight />,
+    projectId: "Project-004",
+    year: `12/2025 - 01/2026`,
+    title: "truyenHH",
+    description:
+      "A fullstack web application for reading comics online with user authentication, bookmarking, and real-time updates.",
+    projectDetails: [
+      { label: "Duration:", value: "1.5 months" },
+      { label: "Teams:", value: "Solo" },
+      { label: "Category:", value: "Fullstack Web Development" },
+    ],
+    technicalEquiq: [
+      { value: "Next.js (TypeScript)" },
+      { value: "Node.js" },
+      { value: "Express.js" },
+      { value: "MongoDB" },
+      { value: "JWT Auth" },
+    ],
+    whatILearned: [
+      {
+        title: "Next.js with TypeScript",
+        desc: "Built SSR/CSR hybrid app, structured scalable project with TypeScript.",
+      },
+      {
+        title: "Backend API Design",
+        desc: "Designed RESTful APIs with Express and handled authentication using JWT.",
+      },
+      {
+        title: "Fullstack Architecture",
+        desc: "Integrated Next.js frontend with Node.js backend and optimized data fetching.",
+      },
+    ],
+    codeLink: "https://github.com/NgoHuy05/ReadStory",
+    demoLink: "https://truyenhh.vercel.app",
+    rate: 4.5,
+  },
+];
   return (
     <>
           <div className="grid grid-cols-1 lg:grid-cols-2 items-start justify-between gap-5 p-4 shadow-lg shadow-gray-300 m-10 border border-amber-500 rounded animate-fade-down">
@@ -124,11 +164,11 @@ const Project = () => {
           <div className="flex gap-5 items-center justify-between p-5 border-2 border-amber-500 bg-gradient-to-tl from-gray-100 to-amber-200 rounded ">
             <div className="flex border-b border-dashed items-center justify-between p-2 w-[50%]">
               <div className="">Total Projects: </div>
-              <div className="font-bold">1</div>
+              <div className="font-bold">4</div>
             </div>
             <div className="flex border-b border-dashed items-center justify-between p-2 w-[50%]">
               <div>Complete Projects: </div>
-              <div className="font-bold">1</div>
+              <div className="font-bold">3</div>
             </div>
           </div>
         </div>
