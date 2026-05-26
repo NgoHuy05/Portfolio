@@ -172,7 +172,7 @@ const Home = () => {
         </Link>
 
         <a
-          href="/CV Resume - NgoDucHuy.pdf"
+          href="/CVResume - NgoDucHuy.pdf"
           download="CV-Resume_NgoDucHuy.pdf"
           className="w-[80%]
           text-center
